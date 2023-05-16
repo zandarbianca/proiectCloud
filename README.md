@@ -26,7 +26,7 @@ Aplicatia este utila din punct de vedere am managementului unui restaurant. Buca
 
 # Flux de date 
 ### Pentru pagina principala, se face un request de tipul GET, care afiseaza o lista cu toate tipurile de mancare din meniu. 
-- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/9e72b51f-fcf3-46b3-a596-01ea3302e3e7)
+- [image](https://github.com/zandarbianca/proiectCloud/assets/81233161/9e72b51f-fcf3-46b3-a596-01ea3302e3e7)
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/54944532-0462-452e-94d5-6202e2998db4)
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/f3f4c967-974b-46eb-a353-f2b481778cea)
 
