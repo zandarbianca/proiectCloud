@@ -4,7 +4,7 @@
        Zandar Gabriela Bianca, grupa 1121
                 
 -      
-        Link video:
+        Link video: https://youtu.be/l4EeXn3e2xc
 -
         Link publicare: https://proiect-cloud-k1v7gp65a-zandarbianca.vercel.app/
         
