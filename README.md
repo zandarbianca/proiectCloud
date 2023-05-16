@@ -9,7 +9,7 @@
         Link publicare: https://proiect-cloud-k1v7gp65a-zandarbianca.vercel.app/
         
 # Introducere 
-Aplicatia pentru gestionarea meniului are ca scop vizualizarea felurilor de mancare disponibile intr-un meniu. De asemenea, se permite si imbunatatirea meniului prin adaugarea altor feluri de mancare. Aplicatie pemite o diversificare a meniului prin intregrarea unui AI care poate genera diferite gustari care pot fi introduse in meniu. Fiecare fel de mancare are un titlu, o scurta descriere in care este prezentat continutul acestui si de asemenea un pret. In cazul in care se doreste eliminarea unui fel de mancare, acesta poate fi sters folosit butonul "Sterge". 
+Aplicatia pentru gestionarea meniului are ca scop vizualizarea felurilor de mancare disponibile intr-un meniu. De asemenea, se permite si imbunatatirea meniului prin adaugarea altor feluri de mancare. Aplicatie pemite o diversificare a meniului prin intregrarea unui AI care poate genera diferite gustari care pot fi introduse in meniu. Fiecare fel de mancare are un titlu, o scurta descriere in care este prezentat continutul acestui si de asemenea un pret. In cazul in care se doreste eliminarea unui fel de mancare, acesta poate fi sters folosit butonul "Sterge". In Pagina principala se afla si doua butoane care trimit user-ul fie caree audagarea in menou, fie catre ChatGPT. 
 # Descriere problemă 
 Aplicatia este utila din punct de vedere am managementului unui restaurant. Bucatarul poate adauga noi retete sau sa elimine din cele vechi in cazul in care nu mai sunt disponibile. Clinetii restaurantului pot vedea cu usurinta felurile de mancare, componenta acestora si, de asemenea si pretul. 
 # Descriere API 
@@ -21,22 +21,22 @@ Aplicatia este utila din punct de vedere am managementului unui restaurant. Buca
 ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/a775e030-77c7-4be5-b60f-817d4c39c9d7)
 - API-ul folosit pentru ChatGPT are urmatoarele statistici:
 ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/51705edc-ec2e-40be-b47a-a01cce8f0757)
-
+- Generarea de tipuri de mancare
+![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/94c97133-ef64-4d9d-be65-c8b16f5dcca9)
 
 # Flux de date 
 ### Pentru pagina principala, se face un request de tipul GET, care afiseaza o lista cu toate tipurile de mancare din meniu. 
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/9e72b51f-fcf3-46b3-a596-01ea3302e3e7)
-- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/4b7a6b51-f0af-4dac-9d19-8e4912707ef4)
+- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/54944532-0462-452e-94d5-6202e2998db4)
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/f3f4c967-974b-46eb-a353-f2b481778cea)
 
 ### Pentru pagina de adaugare a unui fel de mancare, se face un request de tipul POST, care adauga felul de mancare in baza de date.
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/21cee00c-4fcc-4879-ba8c-47b886d875f2)
-- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/5141cefc-dcf2-4419-b754-d047e213e2e5)
-- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/21adce8f-48e7-4e7b-89f7-f9b94cfa4433)
+- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/1b248d14-aea5-4344-96ae-62499d44362a)
 
 ### Pentru stergerea unui fel de mancare, se face un request de tipul DELETE, care sterge felul de mancare in baza de date.
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/1b2e2108-65f3-4ceb-9388-4806107ccd80)
-- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/e34e8291-df4a-4ce1-ab7c-2bbe1499a9f2)
+- ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/94e2730c-2261-403e-a513-46deb56c2532)
 
 ### Pentru folosirea ChatGPT, se face un request de tipul POST.
 - ![image](https://github.com/zandarbianca/proiectCloud/assets/81233161/99765154-6ce9-48d3-b46e-e30ebfb0c378)
