@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import MessageBox from "@/js/components/MessageBox";
-
+import { useRouter } from 'next/router'; 
 function ChatComponent(props) {
 	const [chatMessages, setChatMessages] = useState([]);
+	const router = useRouter();
 
 	const filterChatHistory = chatHistory => {
 		let filteredChatHistory = [];
@@ -76,16 +77,25 @@ function ChatComponent(props) {
 		<div className={"w-full max-w-[1500px] mx-auto my-10"}>
 			<div className={"border border-b-0 rounded-lg border-gray-300'"}>
 				<div className={'border-b text-center px-[20px] py-[10px]'}>
-					<span className={'text-md font-bold text-gray-900'}>
-						This a chat component that looks like Yahoo!
-					</span>
+					<div className=" text-6xl mb-10 mt-10">ChatGPT</div>
+					<div className={'text-md font-bold text-gray-900'}>
+						Foloseste ChatGPT pentru mai multe idei de mancare!
+					</div>
+				 <button type="button"
+
+onClick={() => router.push('/')}
+
+className="text-white mb-20 mt-20 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Inapoi la Meniu
+</button>	
 				</div>
+				
+
 				<MessageBox chatMessages={chatMessages}/>
 			</div>
 			<input
 				id={'chat-input'}
 				type={'text'}
-				className="bg-gray-50 border border-gray-300 border-x-0 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+				className="bg-gray-50 s border border-gray-300 border-x-0 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
 				placeholder="Type something..."
 				onKeyDown={handleKeyDown}
 			/>

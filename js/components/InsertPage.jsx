@@ -1,4 +1,5 @@
 // js/components/InsertPage.jsx
+import { useRouter } from 'next/router'; 
 export default function InsertPage() {
 	const insertRecord = (event) => {
 		event.preventDefault();
@@ -19,13 +20,23 @@ export default function InsertPage() {
             document.getElementById("price").value = "";
 		});
 	}
+		const router = useRouter();
 
 	return (
 	
 			<div className="container px-6 py-10 mx-auto mt-40">
 				<h1 className="w-[500px] mx-auto text-center text-6xl">Adauga in meniu</h1>
 				<p className="w-[1000px] mx-auto  text-center mt-10 text-l">* Toate campurile sunt obligatorii</p>
+ 				<div className={"flex justify-center mt-4"}>
 
+ <button type="button"
+
+onClick={() => router.push('/')}
+
+className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Inapoi la Meniu
+</button>
+
+</div>
 				<form className="mt-20">
 					<div className="mb-10">
 						<label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titlul felului de mancare</label>

@@ -1,9 +1,9 @@
 // js/components/MainPage.jsx
 import {useEffect, useState} from "react";
-
+import { useRouter } from 'next/router'; 
 export default function MainPage() {
 	const [records, setRecords] = useState([]);
-
+	const router = useRouter();
 	useEffect(() => {
 		try{
 			fetch('/api/records', {
@@ -37,13 +37,28 @@ export default function MainPage() {
 
 
 	return (
-		<section className="bg-white dark:bg-gray-900">
+		
             
-			<div className="container px-6 py-10 mx-auto">
+			<div className="container px-6 py-10 mx-auto  dark:bg-gray-900">
 
 				<h1 className="w-[1000px] mx-auto text-center text-6xl">Aplicatie pentru gestionarea unui meniu de restaurant </h1>
 				<p className="w-[1000px] mx-auto text-center mt-4 text-3xl">- Meniul curent al restaurantului - </p>
+				<div className={"flex justify-center mt-4"}>
 
+<button type="button"
+ onClick={() => router.push('/insert')}
+
+ className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Adauga in meniu
+
+ </button>
+ <button type="button"
+ onClick={() => router.push('/chat')}
+
+ className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">ChatGPT
+
+ </button>
+
+</div>
 				<div className="grid  gap-8 mt-8  xl:gap-12  xl:grid-cols-1 ">
 					{records.map(record => (
 						<div
@@ -74,6 +89,6 @@ export default function MainPage() {
 					))}
 				</div>
 			</div>
-		</section>
+		
 	)
 }
